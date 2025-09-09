@@ -1,0 +1,97 @@
+2025-09-07 21:05:01,149 - INFO - Starting FedAsync training...
+2025-09-07 21:05:01,149 - INFO - Starting warm up...
+2025-09-07 21:06:02,853 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=13.79s
+2025-09-07 21:07:42,442 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=99.59s
+2025-09-07 21:09:20,702 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=98.26s
+2025-09-07 21:10:59,282 - INFO - [Epoch 30] validation: acc-top1=0.3098 acc-top5=0.8439, loss=1.8888, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.13, time=98.58s
+2025-09-07 21:12:38,710 - INFO - [Epoch 40] validation: acc-top1=0.3156 acc-top5=0.8579, loss=1.8669, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.24, time=99.43s
+2025-09-07 21:14:19,296 - INFO - [Epoch 50] validation: acc-top1=0.3476 acc-top5=0.8654, loss=1.7994, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.20, time=100.59s
+2025-09-07 21:15:57,551 - INFO - [Epoch 60] validation: acc-top1=0.3478 acc-top5=0.8605, loss=1.8091, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.23, time=98.25s
+2025-09-07 21:17:35,900 - INFO - [Epoch 70] validation: acc-top1=0.3630 acc-top5=0.8706, loss=1.7760, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.55, time=98.35s
+2025-09-07 21:19:16,120 - INFO - [Epoch 80] validation: acc-top1=0.3638 acc-top5=0.8728, loss=1.7586, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.78, time=100.22s
+2025-09-07 21:20:56,931 - INFO - [Epoch 90] validation: acc-top1=0.3645 acc-top5=0.8765, loss=1.7485, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=5.12, time=100.81s
+2025-09-07 21:22:27,679 - INFO - [Epoch 99] validation: acc-top1=0.3552 acc-top5=0.8798, loss=1.7570, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=5.21, time=90.75s
+2025-09-07 21:22:29,049 - INFO - Training history saved to ./log/
+2025-09-08 09:51:36,142 - INFO - Starting FedAsync training...
+2025-09-08 09:51:36,143 - INFO - Starting warm up...
+2025-09-08 09:52:33,519 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=12.82s
+2025-09-08 10:39:11,719 - INFO - Starting FedAsync training...
+2025-09-08 10:39:11,719 - INFO - Starting warm up...
+2025-09-08 10:40:11,382 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=13.21s
+2025-09-08 10:41:51,027 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=99.64s
+2025-09-08 10:43:29,771 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=98.74s
+2025-09-08 10:45:06,845 - INFO - [Epoch 30] validation: acc-top1=0.3098 acc-top5=0.8439, loss=1.8888, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.13, time=97.07s
+2025-09-08 10:46:43,866 - INFO - [Epoch 40] validation: acc-top1=0.3156 acc-top5=0.8579, loss=1.8669, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.24, time=97.02s
+2025-09-08 10:48:21,639 - INFO - [Epoch 50] validation: acc-top1=0.3476 acc-top5=0.8654, loss=1.7994, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.20, time=97.77s
+2025-09-08 10:49:59,113 - INFO - [Epoch 60] validation: acc-top1=0.3478 acc-top5=0.8605, loss=1.8091, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.23, time=97.47s
+2025-09-08 11:02:52,779 - INFO - [Epoch 70] validation: acc-top1=0.3630 acc-top5=0.8706, loss=1.7760, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.55, time=773.67s
+2025-09-08 11:04:45,098 - INFO - [Epoch 80] validation: acc-top1=0.3638 acc-top5=0.8728, loss=1.7586, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.78, time=112.32s
+2025-09-08 11:11:24,510 - INFO - [Epoch 90] validation: acc-top1=0.3645 acc-top5=0.8765, loss=1.7485, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=5.12, time=399.41s
+2025-09-08 11:12:51,836 - INFO - [Epoch 99] validation: acc-top1=0.3552 acc-top5=0.8798, loss=1.7570, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=5.21, time=87.33s
+2025-09-08 11:12:53,113 - INFO - Training history saved to ./log/
+2025-09-08 19:16:37,749 - INFO - Starting FedAsync training...
+2025-09-08 19:16:37,750 - INFO - Starting warm up...
+2025-09-08 19:17:40,529 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=14.65s
+2025-09-08 19:19:20,933 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=100.40s
+2025-09-08 19:20:51,991 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=91.06s
+2025-09-08 19:20:53,239 - INFO - Training history saved to ./log/
+2025-09-08 19:35:20,510 - INFO - Starting FedAsync training...
+2025-09-08 19:35:20,510 - INFO - Starting warm up...
+2025-09-08 19:36:21,232 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=14.38s
+2025-09-08 19:36:32,040 - INFO - Starting FedAsync training...
+2025-09-08 19:36:32,040 - INFO - Starting warm up...
+2025-09-08 19:37:00,839 - INFO - Starting FedAsync training...
+2025-09-08 19:37:00,839 - INFO - Starting warm up...
+2025-09-08 19:37:37,712 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=15.03s
+2025-09-08 19:38:10,969 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=109.74s
+2025-09-08 19:38:11,984 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=18.80s
+2025-09-08 19:39:30,009 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=112.30s
+2025-09-08 19:39:30,268 - INFO - Starting FedAsync training...
+2025-09-08 19:39:30,284 - INFO - Starting warm up...
+2025-09-08 19:39:54,070 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=103.10s
+2025-09-08 19:39:55,338 - INFO - Training history saved to ./log/
+2025-09-08 19:40:07,937 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=115.95s
+2025-09-08 19:40:44,965 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=15.29s
+2025-09-08 19:41:17,246 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=107.24s
+2025-09-08 19:41:18,322 - INFO - Training history saved to ./log/
+2025-09-08 19:41:31,239 - INFO - Starting FedAsync training...
+2025-09-08 19:41:31,239 - INFO - Starting warm up...
+2025-09-08 19:41:50,659 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=102.72s
+2025-09-08 19:41:51,916 - INFO - Training history saved to ./log/
+2025-09-08 19:42:35,324 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=110.36s
+2025-09-08 19:42:39,231 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=16.55s
+2025-09-08 19:43:31,622 - INFO - Starting FedAsync training...
+2025-09-08 19:43:31,625 - INFO - Starting warm up...
+2025-09-08 19:44:22,722 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=107.40s
+2025-09-08 19:44:27,548 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=108.32s
+2025-09-08 19:44:42,590 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=17.20s
+2025-09-08 19:46:10,619 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=103.07s
+2025-09-08 19:46:11,814 - INFO - Training history saved to ./log/
+2025-09-08 19:46:18,008 - INFO - [Epoch 30] validation: acc-top1=0.3098 acc-top5=0.8439, loss=1.8888, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.13, time=115.29s
+2025-09-08 19:46:34,450 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=111.86s
+2025-09-08 19:48:04,014 - INFO - [Epoch 40] validation: acc-top1=0.3156 acc-top5=0.8579, loss=1.8669, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.24, time=106.01s
+2025-09-08 19:48:05,987 - INFO - [Epoch 19] validation: acc-top1=0.3092 acc-top5=0.8410, loss=1.9369, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.45, time=91.54s
+2025-09-08 19:48:07,029 - INFO - Training history saved to ./log/
+2025-09-08 19:49:41,932 - INFO - [Epoch 50] validation: acc-top1=0.3476 acc-top5=0.8654, loss=1.7994, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.20, time=97.92s
+2025-09-08 19:51:19,624 - INFO - [Epoch 60] validation: acc-top1=0.3478 acc-top5=0.8605, loss=1.8091, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.23, time=97.69s
+2025-09-08 19:54:24,138 - INFO - Starting FedAsync training...
+2025-09-08 19:54:24,138 - INFO - Starting warm up...
+2025-09-08 19:54:57,579 - INFO - Starting FedAsync training...
+2025-09-08 19:54:57,579 - INFO - Starting warm up...
+2025-09-08 19:55:25,544 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=14.48s
+2025-09-08 19:55:59,358 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=13.80s
+2025-09-08 19:56:50,338 - INFO - Starting FedAsync training...
+2025-09-08 19:56:50,338 - INFO - Starting warm up...
+2025-09-08 19:57:11,027 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=105.48s
+2025-09-08 19:57:46,583 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=107.22s
+2025-09-08 19:57:59,780 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=16.54s
+2025-09-08 19:59:03,959 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=112.93s
+2025-09-08 19:59:11,887 - INFO - Starting FedAsync training...
+2025-09-08 19:59:11,887 - INFO - Starting warm up...
+2025-09-08 19:59:41,772 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=115.19s
+2025-09-08 19:59:57,724 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=117.94s
+2025-09-08 20:00:27,209 - INFO - [Epoch 0] validation: acc-top1=0.2473 acc-top5=0.7504, loss=2.1009, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=0.00, time=16.94s
+2025-09-08 20:01:09,357 - INFO - [Epoch 30] validation: acc-top1=0.3098 acc-top5=0.8439, loss=1.8888, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.13, time=125.40s
+2025-09-08 20:01:46,510 - INFO - [Epoch 30] validation: acc-top1=0.3098 acc-top5=0.8439, loss=1.8888, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=4.13, time=124.74s
+2025-09-08 20:02:01,563 - INFO - [Epoch 20] validation: acc-top1=0.3093 acc-top5=0.8418, loss=1.9197, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=3.52, time=123.84s
+2025-09-08 20:02:31,829 - INFO - [Epoch 10] validation: acc-top1=0.2761 acc-top5=0.8345, loss=1.9998, lr=0.01, rho=0.01, alpha=0.800000, max_delay=12, mean_delay=2.18, time=124.62s

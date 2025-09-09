@@ -1,0 +1,14 @@
+2025-09-06 16:25:13,822 - INFO - Starting FedSync training...
+2025-09-06 16:25:13,822 - INFO - Starting warm up...
+2025-09-06 16:38:39,049 - INFO - Starting FedSync training...
+2025-09-06 16:38:39,049 - INFO - Starting warm up...
+2025-09-06 16:42:38,922 - INFO - [Epoch 0] Global - acc-top1=0.6212 acc-top5=0.9561, loss=1.7178
+Clients - mean_acc=0.5618, mean_loss=1.8472, selected=10/100, lr=0.01, time=191.39s
+2025-09-06 17:16:17,964 - INFO - [Epoch 10] Global - acc-top1=0.8860 acc-top5=0.9934, loss=0.6192
+Clients - mean_acc=0.8558, mean_loss=0.8058, selected=10/100, lr=0.01, time=2019.04s
+2025-09-06 17:50:51,898 - INFO - [Epoch 20] Global - acc-top1=0.9305 acc-top5=0.9958, loss=0.3486
+Clients - mean_acc=0.9152, mean_loss=0.4898, selected=10/100, lr=0.01, time=2073.93s
+2025-09-06 18:29:02,211 - INFO - [Epoch 30] Global - acc-top1=0.9456 acc-top5=0.9973, loss=0.2428
+Clients - mean_acc=0.9373, mean_loss=0.3565, selected=10/100, lr=0.01, time=2290.31s
+2025-09-06 19:07:57,380 - INFO - [Epoch 40] Global - acc-top1=0.9529 acc-top5=0.9982, loss=0.1925
+Clients - mean_acc=0.9497, mean_loss=0.2885, selected=10/100, lr=0.01, time=2335.17s

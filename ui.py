@@ -51,7 +51,7 @@ class Wizard(tk.Tk):
     def __init__(self, PIL_AVAILABLE=None):
         super().__init__()
         self.title("联邦学习平台")
-        self.geometry("1000x700")
+        self.geometry("1000x780")
         self.minsize(820, 640)
 
         # 背景
@@ -60,7 +60,7 @@ class Wizard(tk.Tk):
 
         # 顶部 Header（Logo + 标题）
         # 半透明 header 浮层
-        header_h = 90
+        header_h = 80
         self.header_canvas = tk.Canvas(self.bg, highlightthickness=0,bg='#7DBCFF',bd=0)
         self.bg.create_window(0, 0, window=self.header_canvas, anchor="nw", width=self.winfo_screenwidth(),
                               height=header_h, tags="header_layer")
@@ -82,13 +82,13 @@ class Wizard(tk.Tk):
 
         # 内容容器
         self.card = tk.Frame(self.bg, bg="white", bd=0, highlightthickness=0)
-        self.card.place(relx=0.5, rely=0.55, anchor="c", relwidth=0.9, relheight=0.78)
+        self.card.place(relx=0.5, rely=0.55, anchor="c", relwidth=0.9, relheight=0.85)
         self.card.configure(borderwidth=0)
         self.card.grid_propagate(False)
 
         # 页面帧容器
         self.stack = tk.Frame(self.card, bg="white")
-        self.stack.place(relx=0.5, rely=0.5, anchor="c", relwidth=0.95, relheight=0.80)
+        self.stack.place(relx=0.5, rely=0.5, anchor="c", relwidth=0.95, relheight=0.90)
 
         self.pages = []
         self.current_index = 0
@@ -220,13 +220,13 @@ class Wizard(tk.Tk):
         # 异步策略卡片
         card_async = tk.Frame(cards, bg="#FFF8F5", highlightbackground="#FFE1D5", highlightthickness=1, padx=12, pady=10)
         tk.Label(card_async, text="异步策略（推荐追求时效）", bg="#FFF8F5", font=("Microsoft YaHei UI", 12, "bold")).pack(anchor="w")
-        tk.Label(card_async, text="• 收敛速度快且稳定\n• 缓解数据异构性带来的收敛延迟", bg="#FFF8F5", justify="left").pack(anchor="w")
+        tk.Label(card_async, text="• 客户端随到随聚合，吞吐高、等待少\n• 存在延迟/陈旧梯度，调参更关键", bg="#FFF8F5", justify="left").pack(anchor="w")
         ttk.Radiobutton(card_async, text="选择异步训练", variable=self.mode_var, value="async").pack(anchor="w", pady=(6,0))
 
         # 缓存辅助异步策略卡片
         card_ca2fl = tk.Frame(cards, bg="#FFF8F5", highlightbackground="#F6E473", highlightthickness=1, padx=12, pady=10)
         tk.Label(card_ca2fl, text="缓存辅助异步策略（比普通异步更高效）", bg="#FFF8F5", font=("Microsoft YaHei UI", 12, "bold")).pack(anchor="w")
-        tk.Label(card_ca2fl, text="• 客户端随到随聚合，吞吐高、等待少\n• 存在延迟/陈旧梯度，调参更关键", bg="#FFF8F5", justify="left").pack(anchor="w")
+        tk.Label(card_ca2fl, text="• 收敛速度快且稳定\n• 缓解数据异构性带来的收敛延迟", bg="#FFF8F5", justify="left").pack(anchor="w")
         ttk.Radiobutton(card_ca2fl, text="选择缓存辅助异步训练", variable=self.mode_var, value="ca2fl").pack(anchor="w", pady=(6,0))
 
         card_sync.pack(side="left", expand=True, fill="both", padx=(0,8))
@@ -292,7 +292,7 @@ class Wizard(tk.Tk):
         if not animate:
             new_page.place(x=0, y=0, relwidth=1, relheight=1)
         else:
-            # 简易滑动动画
+            # 滑动动画
             start_x = -w if not back else w
             new_page.place(x=start_x, y=0, relwidth=1, relheight=1)
             cur_x = start_x
@@ -343,14 +343,22 @@ class Wizard(tk.Tk):
 
         # 构建命令
         if mode == "sync":
-            cmd = ["python", "fedasync.py",
-                   "--classes", 10,
-                   "--model", "default",
-                   "--nsplit", 100,
-                   "--epochs", str(epochs),
-                   "--batchsize", str(batchsize),
-                   "--lr", str(lr),
-                   "--interval", "1"]
+            cmd = ["python", "fedsync.py",
+                "--classes", str(10),
+                "--model", "default",
+                "--nsplit", str(100),
+                "--epochs", str(epochs),
+                "--batchsize", str(batchsize),
+                "--lr", str(lr),
+                "--frac", str(0.1),  # 每轮选择10%的客户端
+                "--local_epochs", str(1),  # 每个客户端本地训练1轮
+                "--lr_decay", str(0.1),  # 学习率衰减率
+                "--lr_decay_epoch", "50,80",  # 在第50和80轮衰减学习率
+                "--min_clients", str(10),  # 每轮最少10个客户端
+                "--aggregation", "fedavg",  # 使用FedAvg聚合
+                "--seed", str(336),
+                "--dir", dir_path,
+                "--valdir", val_dir_path]
 
         elif mode == "async":
             cmd = ["python", "fedasync.py",
@@ -414,6 +422,13 @@ class Wizard(tk.Tk):
             )
             epoch_pat = re.compile(r"Epoch\s+(\d+)", re.IGNORECASE)
 
+            self._append_log(self.proc.stdout.readline())
+            self._append_log(self.proc.stdout.readline())
+            line1 = self.proc.stdout.readline()
+            self._append_log(line1)
+            m = epoch_pat.search(line1)
+            if m:
+                self.current_epoch = min(self.current_epoch + 1, self.total_epochs)
             for line in self.proc.stdout:
                 line = line.rstrip()
                 self._append_log(line)
@@ -464,22 +479,33 @@ class Wizard(tk.Tk):
         if self.progress["value"] < 100.0 or self.proc is not None:
             self.after(120, self._smooth_progress_tick)
 
-    # ---------- 结果图展示 ----------
+        # ---------- 结果图展示 ----------
     def _load_result_image(self):
         img_path = f"./log/training_curves.png"
         if os.path.exists(img_path):
             try:
-                # Tk PhotoImage 直接读 PNG 文件
-                img = tk.PhotoImage(file=img_path)
-                # 缩放到容器（粗略 subsample）
-                max_w = min(760, self.out_canvas.winfo_width() or 760)
-                if img.width() > max_w:
-                    s = max(1, img.width() // max_w)
-                    img = img.subsample(s, s)
+                # 使用 PIL 处理图像
+                from PIL import Image, ImageTk
+                pil_img = Image.open(img_path)
+                # 获取容器尺寸
+                canvas_width = self.out_canvas.winfo_width() or 640
+                canvas_height = self.out_canvas.winfo_height() or 320
+                
+                # 计算缩放比例，保持宽高比
+                img_width, img_height = pil_img.size
+                scale = min(canvas_width / img_width, canvas_height / img_height)
+                new_width = int(img_width * scale)
+                new_height = int(img_height * scale)
+                
+                # 缩放图像
+                pil_img = pil_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+                img = ImageTk.PhotoImage(pil_img)
+                
                 self.out_canvas.configure(image=img)
-                self.out_canvas.image = img
+                self.out_canvas.image = img  # 保持引用
                 self._append_log(f"结果图已加载：{img_path}")
                 return
+                
             except Exception as e:
                 self._append_log(f"加载结果图失败：{e}")
         self._append_log("未找到结果图像，检查 ./log/ 目录。")

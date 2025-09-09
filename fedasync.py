@@ -65,7 +65,7 @@ class FedAsyncTrainer:
         self.alpha = args.alpha
         self.rho = args.rho
         
-        self.logger = setup_logging(args.log if hasattr(args, 'log') else 'fedasync.log')
+        self.logger = setup_logging(args.log if hasattr(args, 'log') else './log/fedasync.log')
         
         # 用于保存训练历史的变量
         self.train_history = {
@@ -177,7 +177,7 @@ class FedAsyncTrainer:
                 loss = F.cross_entropy(outputs, label)
                 loss.backward()
                 
-                # 应用正则化（FedProx风格）
+                # 应用正则化
                 if self.rho > 0 and rho_params is not None:
                     with torch.no_grad():
                         for name, param in self.net.named_parameters():

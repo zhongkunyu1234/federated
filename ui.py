@@ -504,6 +504,7 @@ class Wizard(tk.Tk):
                 self.out_canvas.configure(image=img)
                 self.out_canvas.image = img  # 保持引用
                 self._append_log(f"结果图已加载：{img_path}")
+                pil_img.close()
                 return
                 
             except Exception as e:
